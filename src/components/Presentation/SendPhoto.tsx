@@ -41,7 +41,7 @@ export function SendPhoto() {
   return (
     <Dialog.Root open={open} onOpenChange={setOpen}>
       <Dialog.Trigger asChild>
-        <button className="mt-8 inline-block h-14 w-32 rounded-md bg-red-400 font-bold text-white">
+        <button className="mt-8 inline-block h-12 w-28 rounded-md bg-red-400 font-bold text-white lg:h-14 lg:w-32">
           Faça Parte!
         </button>
       </Dialog.Trigger>
@@ -64,7 +64,7 @@ export function SendPhoto() {
                   alt=""
                 />
               ) : (
-                <Image className="h-32 w-32 text-red-400" />
+                <Image className="h-24 w-24 text-red-400 lg:h-32 lg:w-32" />
               )}
             </label>
             <input
@@ -88,7 +88,7 @@ export function SendPhoto() {
               <button
                 disabled={isLoading}
                 type="submit"
-                className="grid h-14 w-32 place-items-center rounded-md border-2 border-red-400 bg-red-400 font-bold text-white disabled:cursor-not-allowed disabled:opacity-75"
+                className="grid h-12 w-28 place-items-center rounded-md border-2 border-red-400 bg-red-400 font-bold text-white disabled:cursor-not-allowed disabled:opacity-75 lg:h-14 lg:w-32"
               >
                 {isLoading ? (
                   <CircleNotch className="h-6 w-6 animate-spin text-white" />
@@ -99,7 +99,7 @@ export function SendPhoto() {
               <Dialog.Close asChild>
                 <button
                   disabled={isLoading}
-                  className="inline-block h-14 w-32 rounded-md border-2 border-red-400 font-bold text-red-400 disabled:cursor-not-allowed disabled:opacity-75"
+                  className="inline-block h-12 w-28 rounded-md border-2 border-red-400 font-bold text-red-400 disabled:cursor-not-allowed disabled:opacity-75 lg:h-14 lg:w-32"
                 >
                   Cancelar
                 </button>
