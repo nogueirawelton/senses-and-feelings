@@ -10,6 +10,8 @@ export function Gallery() {
 
   const pagination = useMemo(() => chunkArray(photos), [photos]);
 
+  console.log(pagination);
+
   if (!photos.length) {
     return (
       <div className="grid place-items-center">

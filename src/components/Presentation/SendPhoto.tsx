@@ -59,7 +59,7 @@ export function SendPhoto() {
             >
               {file ? (
                 <img
-                  className="aspect-video rounded-lg"
+                  className="aspect-video rounded-lg object-contain"
                   src={URL.createObjectURL(file)}
                   alt=""
                 />
