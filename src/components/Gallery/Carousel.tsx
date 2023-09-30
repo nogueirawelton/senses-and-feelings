@@ -30,7 +30,7 @@ export function Carousel({ index, col, row, images }: CarouselProps) {
       >
         {images.map((image, imageIndex) => (
           <SwiperSlide key={`${image}-${imageIndex}`}>
-            <a href={image} data-fancybox={index}>
+            <a href={image} data-fancybox="all">
               <img
                 src={image}
                 alt=""
