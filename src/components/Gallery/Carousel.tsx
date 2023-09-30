@@ -1,7 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay } from "swiper/modules";
-import Fancybox from "../Fancybox";
 interface CarouselProps {
   index: number;
   col: string;
@@ -11,7 +10,7 @@ interface CarouselProps {
 
 export function Carousel({ index, col, row, images }: CarouselProps) {
   return (
-    <Fancybox
+    <div
       style={{
         gridColumn: col,
         gridRow: row,
@@ -40,6 +39,6 @@ export function Carousel({ index, col, row, images }: CarouselProps) {
           </SwiperSlide>
         ))}
       </Swiper>
-    </Fancybox>
+    </div>
   );
 }

@@ -4,6 +4,7 @@ import carouselsConfig from "./config";
 import { CircleNotch } from "phosphor-react";
 import chunkArray from "../../utils/chunkArray";
 import { usePhotos } from "../../hooks/usePhotos";
+import Fancybox from "../Fancybox";
 
 export function Gallery() {
   const { photos } = usePhotos();
@@ -21,7 +22,7 @@ export function Gallery() {
   }
 
   return (
-    <div className="grid h-[320px] w-full grid-cols-12 grid-rows-6 gap-2 lg:h-[calc(100vh-16rem-2px)]">
+    <Fancybox className="grid h-[320px] w-full grid-cols-12 grid-rows-6 gap-2 lg:h-[calc(100vh-16rem-2px)]">
       {carouselsConfig.map(({ col, row }, index) => (
         <Carousel
           index={index}
@@ -31,6 +32,6 @@ export function Gallery() {
           key={index}
         />
       ))}
-    </div>
+    </Fancybox>
   );
 }
