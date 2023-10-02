@@ -9,7 +9,7 @@ import Fancybox from "../Fancybox";
 export function Gallery() {
   const { photos } = usePhotos();
 
-  const pagination = useMemo(() => chunkArray(photos.sort()), [photos]);
+  const pagination = useMemo(() => chunkArray(photos), [photos]);
 
   if (!photos.length) {
     return (
