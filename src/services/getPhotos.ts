@@ -5,7 +5,7 @@ export default async function getPhotos() {
   const { items } = await listAll(ref(storage, "/public-photos"));
 
   const data = await Promise.all(
-    items.map(async (item) => {
+    items.sort((a, b) => b.name.localeCompare(a.name)).map(async (item) => {
       return await getDownloadURL(item);
     }),
   );
