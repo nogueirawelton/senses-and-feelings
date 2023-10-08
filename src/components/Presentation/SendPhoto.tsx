@@ -47,7 +47,7 @@ export function SendPhoto() {
       </Dialog.Trigger>
       <Dialog.Portal>
         <Dialog.Overlay className="fixed inset-0 z-10 bg-[rgba(0,0,0,0.6)]" />
-        <Dialog.Content className="data-[state=open]:animate-show-in fixed left-1/2 top-1/2 z-20 w-[720px] max-w-[95%] bg-white shadow-md">
+        <Dialog.Content className="fixed left-1/2 top-1/2 z-20 w-[720px] max-w-[95%] bg-white shadow-md data-[state=open]:animate-show-in">
           <form
             className="flex flex-col items-center p-4 lg:p-8"
             onSubmit={handleSubmit}
@@ -64,7 +64,12 @@ export function SendPhoto() {
                   alt=""
                 />
               ) : (
-                <Image className="h-24 w-24 text-red-400 lg:h-32 lg:w-32" />
+                <div className="flex flex-col items-center justify-center">
+                  <Image className="h-24 w-24 text-red-400 lg:h-32 lg:w-32" />
+                  <small className="text-red-400">
+                    Clique para enviar uma foto!
+                  </small>
+                </div>
               )}
             </label>
             <input
