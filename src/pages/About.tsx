@@ -2,8 +2,11 @@ export function About() {
   return (
     <main className="mx-auto w-full max-w-screen-2xl flex-1 px-4 py-12 lg:px-8">
       <h2 className="text-2xl font-bold text-zinc-600">
-        Atividade Integradora IV
+        Atividade Integradora VI
       </h2>
+      <strong className="text-zinc-600 pb-4 block">
+        Orientadora: Prof.ª Angelina Accetta Rojas
+      </strong>
       <div className="mt-4">
         <strong className="text-lg text-zinc-600">Arquitetura</strong>
         <ul className="space-y-2 text-zinc-500">
